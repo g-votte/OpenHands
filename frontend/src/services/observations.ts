@@ -12,6 +12,8 @@ import {
 } from "#/state/chat-slice";
 
 export function handleObservationMessage(message: ObservationMessage) {
+  console.log("=== Observation Message ===");
+  console.log(JSON.stringify(message, null, 2));
   switch (message.observation) {
     case ObservationType.RUN: {
       if (message.extras.hidden) break;
